@@ -5,6 +5,10 @@
     src: url(../fontes/idroid.otf) format(opentype);
     font-weight: normal;
 }
+@font-face {
+    font-family: 'bebas';
+    src: url(../fontes/BebasNeue-Regular.ttf) format(truetype);
+}
 :root{/*arvore onde se coloca todas as variáveis*/
     --cor0: #ebe5c5;/*para se criar variáveis em css coloca-se primeiro os 2 traços(--)*/
     --cor1: #83e1ad;
@@ -15,6 +19,7 @@
 
     --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
     --fonte-android: 'idroid', serif;
+    --fonte-destaque: 'bebas', sans-serif;
 }
 *{
     margin: 0px;
@@ -36,14 +41,14 @@ header{
     
 }
 header > h1{
-    font-size: 2em;
+    font: normal 2.6em var(--fonte-destaque);
     color: white;
     padding: 40px 10px 10px 10px;
     text-shadow: -1px 2px 3px rgba(0, 0, 0, 0.507);/*text-shadow serve para colocar sombra no texto*/
 }
 header > p{
     font-size: 1.1em;
-    min-width: 400px;
+    max-width: 450px;
     margin: auto;
     text-shadow:1px 1px 2px rgba(0, 0, 0, 0.49);
 }
@@ -74,7 +79,7 @@ main{
     border-radius: 0px 0px 10px 10px ;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.398);
 }
-main p{ /*quando não se coloca o sinal de maior indica que tds os paragráfos(neste caso) incluindo os que estão dentro de outras caixas sofreram as mesmas alterações, caso se coloca-se o sinal os "p" de outras caixas não sofreriam alterações.*/
+main p{ /*quando não se coloca o sinal de maior indica que tds os paragráfos(neste caso) incluindo os que estão dentro de outras caixas sofreram as mesmas alterações, caso se coloca o sinal os paragrafos (p) de outras caixas não sofrem alterações.*/
     text-align: justify;
     text-indent: 30px;
     padding: 25px 0px;
